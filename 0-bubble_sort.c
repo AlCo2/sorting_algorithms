@@ -13,14 +13,15 @@ void bubble_sort(int *array, size_t size)
 
 	while (i < size - 1)
 	{
-		j = i + 1;
-		while (j < size)
+		j = 0;
+		while (j < size - i - 1)
 		{
-			if (array[i] > array[j])
+			if (array[j] > array[j + 1])
 			{
-				temp = array[i];
-				array[i] = array[j];
-				array[j] = temp;
+				temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
+				print_array(array, size);
 			}
 			j++;
 		}
