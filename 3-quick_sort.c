@@ -42,24 +42,23 @@ void quick_sort_recursive(int *array, int low, int high, size_t size)
  */
 int partition(int *array, int low, int high, size_t size)
 {
-	int pivot = array[high];
 	int i = low - 1;
 	int j;
 
-	for (j = low; j <= high; j++)
+	for (j = low; j <= high - 1; j++)
 	{
-		if (array[j] < pivot)
+		if (array[j] < array[high])
 		{
 			i++;
 			/*Swap array[i] and array[j] */
-			if (i != j)
+			if (i < j)
 			{
 				swap(&array[i], &array[j]);
 				print_array(array, size);
 			}
 		}
 	}
-	if ((i + 1) != high)
+	if (array[i + 1] > array[high])
 	{
 		swap(&array[i + 1], &array[high]);
 		print_array(array, size);
