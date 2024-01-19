@@ -24,15 +24,11 @@ void quick_sort(int *array, size_t size)
  */
 void quick_sort_recursive(int *array, int low, int high, size_t size)
 {
+	int pivot_index;
+
 	if (low < high)
 	{
-		/**
-		 *Find pivot element such that elements smaller
-		 *than pivot are on the left and greater on the right
-		 */
-		int pivot_index = partition(array, low, high, size);
-
-		/*Recursively sort the sub-arrays */
+		pivot_index = partition(array, low, high, size);
 		quick_sort_recursive(array, low, pivot_index - 1, size);
 		quick_sort_recursive(array, pivot_index + 1, high, size);
 	}
