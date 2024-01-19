@@ -20,6 +20,7 @@ void quick_sort(int *array, size_t size)
  *@array: The array to be sorted
  *@low: The low index of the partition
  *@high: The high index of the partition
+ *@size: Number of elements in the array
  */
 void quick_sort_recursive(int *array, int low, int high, size_t size)
 {
@@ -42,6 +43,7 @@ void quick_sort_recursive(int *array, int low, int high, size_t size)
  *@array: The array to be sorted
  *@low: The low index of the partition
  *@high: The high index of the partition
+ *@size: Number of elements in the array
  *
  *Return: The index of the pivot element
  */
