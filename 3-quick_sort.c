@@ -25,8 +25,9 @@ void quick_sort_recursive(int *array, int low, int high, size_t size)
 {
 	if (low < high)
 	{
-		/*Find pivot element such that elements smaller
-		 * than pivot are on the left and greater on the right
+		/**
+		 *Find pivot element such that elements smaller
+		 *than pivot are on the left and greater on the right
 		 */
 		int pivot_index = partition(array, low, high, size);
 
