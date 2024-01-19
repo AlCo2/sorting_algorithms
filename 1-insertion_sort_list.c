@@ -9,7 +9,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *i;
 	listint_t *j;
 	listint_t *key;
-	
+
 	if (!list)
 		return;
 	i = *list;
